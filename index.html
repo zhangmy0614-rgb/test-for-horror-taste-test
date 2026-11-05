@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#11100f" />
+  <meta name="description" content="一场关于恐怖片审美的 12 题电影杂志式测试。" />
+  <title>Horror Taste Test — 测测你的恐怖片审美</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#home" aria-label="Horror Taste Test 首页"><span class="wordmark-mark">H.</span><span>HORROR<br> TASTE TEST</span></a>
+    <div class="issue">A FIELD GUIDE TO YOUR DARK SIDE <span>·</span> VOL. 01</div>
+    <a class="top-link" href="#about">关于测试 <span>↗</span></a>
+  </header>
+
+  <main>
+    <section id="home" class="screen hero-screen active" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><i></i> THE CINEMA OF FEAR · 2025 EDITION</div>
+          <h1 id="hero-title">测测你的<br><em>恐怖片</em><br>审美偏好<span class="period">.</span></h1>
+          <p class="hero-intro">你追求的是令人窒息的氛围，还是一记精准的惊吓？<br>用 12 道题，找到你心里的那部午夜电影。</p>
+          <button id="start-btn" class="button button-primary">开始测试 <span>↗</span></button>
+          <div class="hero-meta"><span>12 QUESTIONS</span><b>·</b><span>6 CINEMATIC IDENTITIES</span><b>·</b><span>≈ 3 MIN</span></div>
+        </div>
+        <div class="hero-art" role="img" aria-label="深夜影院中一束落在空座椅上的光">
+          <div class="art-frame"><div class="art-light"></div><div class="seat seat-one"></div><div class="seat seat-two"></div><div class="seat seat-three"></div><div class="art-caption">STILL / 001 — THE LAST ROW</div><div class="art-index">01<br><span>12</span></div></div>
+          <div class="side-note">SOME THINGS ARE BETTER<br>LEFT IN THE DARK.</div>
+        </div>
+      </div>
+      <div class="hero-bottom"><span>IN GOOD TASTE, EVEN FEAR IS PERSONAL.</span><span>SCROLL TO BEGIN <b>↓</b></span></div>
+    </section>
+
+    <section id="quiz" class="screen quiz-screen" aria-labelledby="question-title" hidden>
+      <div class="quiz-heading"><div class="eyebrow"><i></i> YOUR PRIVATE SCREENING</div><div class="quiz-count"><span id="current-number">01</span> <small>/ 12</small></div></div>
+      <div class="progress-track"><div id="progress-fill"></div></div>
+      <div class="question-layout">
+        <div class="question-aside"><span class="aside-number" id="aside-number">01</span><span class="aside-rule"></span><span class="aside-label">THE<br>QUESTION</span></div>
+        <div class="question-main"><p class="question-kicker" id="question-kicker">ATMOSPHERE / 01</p><h2 id="question-title"></h2><div id="options" class="options" role="list"></div><div class="quiz-footer"><button id="back-btn" class="text-button" type="button">← 上一题</button><span>CHOOSE WHAT FEELS TRUE</span></div></div>
+      </div>
+    </section>
+
+    <section id="result" class="screen result-screen" aria-labelledby="result-title" hidden>
+      <div class="result-top"><div class="eyebrow"><i></i> YOUR HORROR AESTHETIC</div><span class="result-issue">PERSONAL PROFILE · Nº <b id="result-id">001</b></span></div>
+      <div class="result-grid">
+        <div class="result-main"><p id="result-en" class="result-en">THE ...</p><h2 id="result-title"></h2><p id="result-desc" class="result-desc"></p><div class="result-actions"><button id="share-btn" class="button button-primary">生成分享图 <span>↗</span></button><button id="retake-btn" class="button button-quiet">重新测试 <span>↺</span></button></div><p id="share-status" class="share-status" aria-live="polite"></p></div>
+        <aside class="result-card"><div class="card-top"><span>YOUR VIEWING NOTES</span><span>HTT / 01</span></div><div class="trait-block"><h3>审美特征</h3><div id="traits" class="trait-list"></div></div><div class="trait-block"><h3>你的导演</h3><p id="directors" class="director-list"></p></div><div class="trait-block"><h3>今晚片单</h3><ul id="films" class="film-list"></ul></div><div class="card-bottom">THE NIGHT IS YOURS <span>✳</span></div></aside>
+      </div>
+      <div class="result-bottom"><span>FEAR, FRAMED DIFFERENTLY.</span><button id="back-home-btn" class="text-button">回到首页 ↑</button></div>
+    </section>
+    <section id="about" class="about-strip"><span>AN UNOFFICIAL LOVE LETTER TO THE GENRE.</span><span>NOT A DIAGNOSIS. JUST GOOD CINEMA.</span><span>EST. AFTER DARK <b>✳</b></span></section>
+  </main>
+  <canvas id="share-canvas" width="1200" height="1500" hidden></canvas>
+  <script src="app.js"></script>
+</body>
+</html>
